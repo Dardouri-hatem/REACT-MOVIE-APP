@@ -1,7 +1,6 @@
 import {Button,Modal } from 'react-bootstrap'
 import React, { Component } from 'react'
-import BeautyStars from "beauty-stars";
-
+import Rating from "./Rating"
 
 
 
@@ -25,9 +24,10 @@ class AddModal extends Component {
                         <label > Image URL : </label><br/>
                         <input type="text" onChange={(e)=>this.setState({imgURL:e.target.value})}></input><br/><br/>
                         <label>Movie Rating : </label>
-                        <BeautyStars
-                        value={this.state.Rate}
-                        onChange={(value) => this.setState({Rate:value})}
+                        <Rating
+                         rate={this.state.Rate}
+                         changeRate={(value) => this.setState({Rate:value})}
+                         size={"40px"}
                         />
                     </Modal.Body>
                     <Modal.Footer>

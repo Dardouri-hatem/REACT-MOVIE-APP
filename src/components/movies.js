@@ -78,12 +78,13 @@ export class Movies extends Component {
     return film.name
       .toLowerCase()
       .trim()
-      .includes(InputSearch);
+      .includes(InputSearch.toLowerCase());
   };
 
  
 
   AddMovie = (img, name, rate) => {
+    img&&name&&rate&&
     this.setState({
       moviesList: [...this.state.moviesList, { img, name, rate }],
       showModal: false
@@ -92,9 +93,7 @@ export class Movies extends Component {
 
 
   changeRate = value=> {
-    console.log(value)
     this.setState({ minRate: value });
-    // console.log(this.state.minRate);
   };
 
   render() {
