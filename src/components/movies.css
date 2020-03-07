@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Lemonada&display=swap');
+* {
+  padding: 0;
+  margin: 0 ;
+  box-sizing: border-box;
+  font-family: "Lemonada",'Dancing Script';
+}
+
+img {
+  width: 270px;
+  height: 270px;
+}
+.movies-container {
+  margin-left: 7%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card-container{
+  border: solid lightgray;
+  margin: 10px;
+  border-radius:5px ;
+
+}
+.Container {
+  background-image: url(background.PNG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 625px;
+ 
+}
+.add-btn{
+  width: 270px;
+  height: 325px;
+  border: solid lightgray;
+  font-size: 200px;
+  margin: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius:5px ;
+
+}
+
+.caption-movie{
+  background-color: lightslategrey;
+  text-align: center;
+}
+p{
+  margin: 0;
+}
