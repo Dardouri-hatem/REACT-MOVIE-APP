@@ -4,6 +4,7 @@ import Header from "./header";
 import MovieCard from "./MovieCard";
 
 
+
 const moviesList = [
   {
     img:
@@ -63,6 +64,7 @@ export class Movies extends Component {
     moviesList,
     minRate: 0,
     name: "",
+    showModal: false
 
   };
 
@@ -91,12 +93,21 @@ export class Movies extends Component {
     });
   };
 
+  closeModal = () => {
+    this.setState({
+      showModal: false
+    });
+  };
+  OpenModal=()=>{
+    this.setState({ showModal: true })
+  }
 
   changeRate = value=> {
     this.setState({ minRate: value });
   };
 
   render() {
+
     return (
       <div className="Container">
         <Header
@@ -112,6 +123,9 @@ export class Movies extends Component {
               film.rate >= this.state.minRate
           )}
           AddMovie={this.AddMovie}
+          showModal={this.state.showModal}
+          closeModal={this.closeModal}
+          OpenModal={this.OpenModal}
         />
 
         
@@ -119,6 +133,8 @@ export class Movies extends Component {
       </div>
     );
   }
+ 
+
 }
 
 export default Movies;

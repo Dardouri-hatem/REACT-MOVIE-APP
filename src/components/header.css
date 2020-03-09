@@ -8,25 +8,27 @@
     justify-content: space-around;
     
 }
-.search-container{
-    width: 50%;
+
+.search-input{
+    width: 40%;
     height: 40px;
-    background: none;
+    background: rgb(49, 47, 47);
+    border-radius: 10px;
+    padding-left: 45px;
+    color: white;
+    border: 0;
+    background-image: url(https://cdn2.iconfinder.com/data/icons/media-and-navigation-buttons-square/512/Button_15-512.png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+}
+.search-input:focus{
+    outline: none;
 }
 
-.header input{
-    width: 70%;
-    height: 40px;
-    background: none;
-    border-radius: 4px;
-    padding-left: 5px;
-    color: white;
-}
 .netflix-logo{
     width: 200px;
     height: 120px;
     border: none;
-    margin-right: 100px;
 }
 .star{
     transition-duration: 1s;

@@ -12,11 +12,7 @@ class MovieCard extends Component {
    addMovie:[{img:"", name:"", rate:""}]
   };
 
-  closeModal = () => {
-    this.setState({
-      showModal: false
-    });
-  };
+  
   
 
 
@@ -34,14 +30,14 @@ class MovieCard extends Component {
         ))}
         <span
           className="add-btn"
-          onClick={() => this.setState({ showModal: true })}
+          onClick={ this.props.OpenModal}
         >
           +
         </span>
 
         <AddModal
-          showModal={this.state.showModal}
-          closeModal={this.closeModal}
+          showModal={this.props.showModal}
+          closeModal={this.props.closeModal}
           AddMovie={this.props.AddMovie}
         />
        
@@ -49,6 +45,7 @@ class MovieCard extends Component {
       </div>
     );
   }
+  
 }
 
 export default MovieCard;
